@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\R16\R17\frameworks\cinema.framework\project\cinema.framework.vcxproj">
+      <Project>{69bf9b7d-7eb2-7fc5-0009-38cb8c5cdea3}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvacceleration\nvacceleration.vcxproj">
+      <Project>{284ac6d4-e894-459d-b85e-338d9567b810}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvalgorithms\nvalgorithms.vcxproj">
+      <Project>{e602d533-42a5-4596-ba2e-2b9ab0ef0a7b}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvc4d\nvc4d.vcxproj">
+      <Project>{dcd893dd-a809-43d6-af7d-a6492b5ea35c}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvcollision\nvcollision.vcxproj">
+      <Project>{709a439a-7b36-414c-a3f5-fb17495024e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvcolor\nvcolor.vcxproj">
+      <Project>{be84af10-ca49-4a96-a22f-60ae7cb4d7b7}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvContainer\nvContainer.vcxproj">
+      <Project>{1778d6ea-f22c-4fbf-bac3-9d79e007b041}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvgeometry\nvgeometry.vcxproj">
+      <Project>{b7bffac8-31e1-4b44-b975-4c5964a9bacf}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvio\nvio.vcxproj">
+      <Project>{0696085e-8f39-4133-a934-a7ce32c36dd8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvmath\nvmath.vcxproj">
+      <Project>{7eeaf760-e1c6-4063-aedf-a0f28d40c43a}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvmem\nvmem.vcxproj">
+      <Project>{cb692fd5-1a42-49ec-8c23-ab2e08c67e98}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvnetwork\nvnetwork.vcxproj">
+      <Project>{bd995ace-5f6a-4678-b6c8-574a957d84dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvlibs\navie_library\nvrandom\nvrandom.vcxproj">
+      <Project>{100decf4-caf2-44cc-a144-beeea18563fc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\c4d_denoise_vp.cpp" />
+    <ClCompile Include="source\DCTdenoise\DCT2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\DCT2D16x16.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\DCTdenoising.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\demo_DCTdenoising.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\nvdenoise.cpp" />
+    <ClCompile Include="source\nvdenoise_cl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\c4d_denoise_vp.h" />
+    <ClInclude Include="source\DCTdenoise\DCT2D.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\DCTdenoise\DCT2D16x16.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\DCTdenoise\DCTdenoising.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\nvdenoise.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{341026C6-E6CC-426E-9553-C7ECB6C3CACE}</ProjectGuid>
+    <RootNamespace>nvcustomgui</RootNamespace>
+    <ProjectName>nvDenoise</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>
+    </CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>
+    </CharacterSet>
+    <UseIntelMKL>Parallel</UseIntelMKL>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\nvlibs\navie_library\BasePath.props" />
+    <Import Project="..\libraries\cinema4d\R16\frameworks\settings\DebugWin64.props" />
+    <Import Project="..\libraries\cinema4d\R16\frameworks\cinema.framework\project\cinema.framework.includes.props" />
+    <Import Project="..\nvlibs\navie_library\nvl_boost.props" />
+    <Import Project="..\nvlibs\navie_library\nvl_includes_debug.props" />
+    <Import Project="projectsettings.props" />
+    <Import Project="..\Effex\nvl_threading_debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\nvlibs\navie_library\BasePath.props" />
+    <Import Project="..\libraries\cinema4d\R16\frameworks\settings\ReleaseWin64.props" />
+    <Import Project="..\libraries\cinema4d\R16\frameworks\cinema.framework\project\cinema.framework.includes.props" />
+    <Import Project="..\nvlibs\navie_library\nvl_boost.props" />
+    <Import Project="..\nvlibs\navie_library\nvl_includes.props" />
+    <Import Project="projectsettings.props" />
+    <Import Project="..\Effex\nvl_threading.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.cdl64</TargetExt>
+    <TargetName>nvDenoiser</TargetName>
+    <IncludePath>$(BasePath)\libraries\opencl;$(BasePath)\nvc4d;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\</OutDir>
+    <LibraryPath>$(BasePath)\x64;$(BasePath)\libraries\x64\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>nvDenoiser</TargetName>
+    <TargetExt>.cdl64</TargetExt>
+    <LibraryPath>$(BasePath)\x64;$(BasePath)\libraries\x64\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BasePath)\nvc4d;$(BasePath)\libraries\opencl;$(IncludePath)</IncludePath>
+    <OutDir>C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PreprocessorDefinitions>BOOST_COMPUTE_DEBUG_KERNEL_COMPILATION;USE_OPENCL;C4D_R16;CPP11;CINEMA4D;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\res\description;C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\res;$(BasePath)\libraries\opencv\build\include;$(BasePath)\libraries\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DisableSpecificWarnings>4244;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>USE_OPENCL;C4D_R16;CPP11;CINEMA4D;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\res;C:\Users\KatachiHome\AppData\Roaming\MAXON\CINEMA 4D R16_14AF56B1\plugins\nvDenoise\res\description;$(BasePath)\libraries\opencv\build\include;$(BasePath)\libraries\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

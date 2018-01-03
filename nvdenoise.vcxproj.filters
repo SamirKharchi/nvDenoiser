@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{22c6faf0-e673-41f8-9447-f69fc1919a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\c4d">
+      <UniqueIdentifier>{120edd47-7334-411f-b60a-955509c177a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\nlm">
+      <UniqueIdentifier>{51fc2591-e6a6-4dad-99ad-7a205d726ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\dct">
+      <UniqueIdentifier>{fe5e8e71-631b-4686-aeb4-390e800c2b69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\c4d_denoise_vp.cpp">
+      <Filter>source\c4d</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source\c4d</Filter>
+    </ClCompile>
+    <ClCompile Include="source\nvdenoise.cpp">
+      <Filter>source\nlm</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\DCT2D.cpp">
+      <Filter>source\dct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\DCT2D16x16.cpp">
+      <Filter>source\dct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\DCTdenoising.cpp">
+      <Filter>source\dct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DCTdenoise\demo_DCTdenoising.cpp">
+      <Filter>source\dct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\nvdenoise_cl.cpp">
+      <Filter>source\nlm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\c4d_denoise_vp.h">
+      <Filter>source\c4d</Filter>
+    </ClInclude>
+    <ClInclude Include="source\nvdenoise.h">
+      <Filter>source\nlm</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DCTdenoise\DCT2D.h">
+      <Filter>source\dct</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DCTdenoise\DCT2D16x16.h">
+      <Filter>source\dct</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DCTdenoise\DCTdenoising.h">
+      <Filter>source\dct</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
