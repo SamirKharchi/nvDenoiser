@@ -1,2 +1,2 @@
 # nvDenoiser
-GPU based denoiser
+GPU based denoiser for Cinema 4D
